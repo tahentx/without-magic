@@ -34,6 +34,13 @@ def update
   end
 end
 
+def destroy
+    @student = find_student
+    @student.destroy
+    redirect_to students_url
+end
+
+
 # no view associated with update
 
   private 
