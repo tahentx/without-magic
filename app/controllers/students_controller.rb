@@ -25,6 +25,17 @@ class StudentsController < ApplicationController
     @student = find_student
   end
 
+def update
+  @student = find_student
+  if @student.update(student_params)
+    redirect_to @student
+  else
+    render :edit
+  end
+end
+
+# no view associated with update
+
   private 
 
   def find_student
