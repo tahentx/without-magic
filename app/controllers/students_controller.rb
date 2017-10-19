@@ -20,7 +20,17 @@ class StudentsController < ApplicationController
     end
   end
 
+
+  def edit
+    @student = find_student
+  end
+
   private 
+
+  def find_student
+    Student.find(params[:id])
+  end
+
   def student_params
 	params.require(:student).permit(:name)
   end
