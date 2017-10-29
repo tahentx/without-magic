@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   patch 'students/:id' => 'students#update'
   delete 'students/:id' => 'students#destroy', as: 'destroy_student', id: /\d+/
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
